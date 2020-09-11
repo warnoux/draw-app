@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   private socket: any;
   matrice: Array<number>;
   public ngOnInit() {
-    this.socket = io("http://localhost:3001");
+    this.socket = io("http://localhost:3000");
     this.socket.emit("init");
   }
   public ngAfterViewInit() {
