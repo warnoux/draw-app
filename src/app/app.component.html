@@ -1,0 +1,11 @@
+<ng-container *ngIf="matrice">
+  <table>
+    <tr *ngFor="let row of matrice">
+      <td *ngFor="let col of row" (click)="changeColor(col)" >
+        <ng-container *ngIf="col.color != 'rgb(255,255,255)'"> 
+          <div [ngStyle]="{'background-color': col.color}"></div></ng-container>
+      </td>
+    </tr>
+</table>
+</ng-container>
+
